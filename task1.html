@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basics of Web Development</title>
+    <style>
+     body {
+        background: url('https://img.freepik.com/premium-photo/soil-types-as-background_875825-18851.jpg');
+        background-size: cover;
+        animation: waveIn 2s ease-in;
+     }
+
+     @keyframes waveIn {
+       0% { opacity: 0; transform: translateY(-20px); }
+       100% { opacity: 1; transform: translateY(0); }
+     }
+
+     .first {
+        background-color: rgba(0, 128, 128, 0.9);
+        padding: 10px;
+        text-align: center;
+        color: white;        
+     }
+
+     h3 {
+        text-align: center;
+        color: white;
+     }
+
+     .overlayout {
+        display: flex;
+        justify-content: left;
+        gap: 70px;
+        flex-wrap: wrap;
+        padding: 30px;
+        margin-left: 150px;
+     }
+
+     .soils {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        transition: transform 0.3s ease;
+     }
+
+     .soils:hover {
+        transform: scale(1.05);
+     }
+
+     .soils img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+     }
+
+     .soils h3 {
+        margin: 10px 0 5px 0;
+        color: #333;
+     }
+
+     .soils p {
+        padding: 0 5px;
+        font-size: 14px;
+        color: #555;
+     }
+
+     .soils a {
+        color: teal;
+        font-weight: bold;
+        text-decoration: none;
+     }
+
+     .button-container {
+        text-align: center;
+        margin: 30px;
+     }
+
+     button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: teal;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+     }
+
+     button:hover {
+        background-color: darkcyan;
+     }
+
+     #moreSoils {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        margin-top: 20px;
+     }
+     footer {
+        background: purple;
+        color: white;
+        padding: 10px;
+        text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h1>🌱 Best Soil Types</h1>
+    </div>
+
+    <h3>🌿 Find the Right Soil for Your Plant</h3>
+
+    <div class="overlayout">
+      <!-- Existing Soils -->
+      <div class="soils">
+        <h3>Loamy Soil</h3>
+        <img src="https://th.bing.com/th/id/OIP.xUZ5fv0RpWQMkwvePoN2uQHaFo?w=286&h=218&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="Loamy Soil" />
+        <p>Rich in nutrients and drains well. Perfect for most plants, especially vegetables.</p>
+        <a href="https://en.wikipedia.org/wiki/Loam" target="_blank">Learn more</a>
+      </div>
+
+      <div class="soils">
+        <h3>Sandy Soil</h3>
+        <img src="https://jeffries.com.au/wp-content/uploads/2021/07/JEFFRIES-12-04-21-SOCIAL-19.jpg" alt="Sandy Soil" />
+        <p>Light and dry, drains quickly but lacks nutrients. Good for root vegetables and succulents.</p>
+        <a href="https://en.wikipedia.org/wiki/Sand" target="_blank">Learn more</a>
+      </div>
+
+      <div class="soils">
+        <h3>Clay Soil</h3>
+        <img src="https://th.bing.com/th/id/OIP.LjVxawbVMhelApr4u96SUgHaE9?r=0&rs=1&pid=ImgDetMain" alt="Clay Soil" />
+        <p>Dense and holds water. Great for rice and shrubs, but may need composting to improve drainage.</p>
+        <a href="https://en.wikipedia.org/wiki/Clay" target="_blank">Learn more</a>
+      </div>
+
+      <div class="soils">
+        <h3>Peaty Soil</h3>
+        <img src="https://peatlands.org/assets/uploads/2019/06/peatsw-2560x1440.jpg" alt="Peaty Soil" />
+        <p>Dark and rich in organic matter. Slightly acidic. Good for shrubs, root crops, and flowers.</p>
+        <a href="https://en.wikipedia.org/wiki/Peat" target="_blank">Learn more</a>
+      </div>
+
+      <div class="soils">
+        <h3>Chalky Soil</h3>
+        <img src="https://th.bing.com/th/id/OIP.ji9c9hWMbCKAHnto8C6_VgHaEH?r=0&rs=1&pid=ImgDetMain" alt="Chalky Soil" />
+        <p>Alkaline and stony. Needs organic matter. Suitable for spinach, cabbage, and lilacs.</p>
+        <a href="https://en.wikipedia.org/wiki/Chalk" target="_blank">Learn more</a>
+      </div>
+
+      <div class="soils">
+        <h3>Silty Soil</h3>
+        <img src="https://th.bing.com/th/id/OIP.56CATQI2XcqolpKbOgJyKwHaHa?r=0&rs=1&pid=ImgDetMain" alt="Silty Soil" />
+        <p>Fertile and smooth in texture. Retains moisture and supports fruit and leafy vegetables well.</p>
+        <a href="https://en.wikipedia.org/wiki/Silt" target="_blank">Learn more</a>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button onclick="showMore()">🌾 Explore More Soil Types</button>
+    </div>
+
+    <script>
+      function showMore() {
+        const moreSoils = document.getElementById("moreSoils");
+        moreSoils.style.display = "flex";
+      }
+    </script>
+    <footer>
+       <p>🌿 A Portfolio designed by <strong>Vineela</strong> 🌿</p>
+   </footer>
+
+
+</body>
+</html>
