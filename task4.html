@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vineela Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+    }
+
+    .first {
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .first a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .first a:hover {
+      color: #00cec9;
+    }
+
+    .second {
+      text-align: center;
+      padding: 80px 20px 40px;
+      color: #f8a5c2;
+    }
+
+    .second h1 {
+      font-size: 48px;
+      color: #ffeaa7;
+    }
+
+    .second h3 {
+      font-size: 24px;
+      color: #fab1a0;
+    }
+
+    .third {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0 40px;
+    }
+
+    .third a img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .third a img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px #00cec9;
+    }
+
+    .section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      color: #81ecec;
+      margin-bottom: 20px;
+    }
+
+    .section p, .section li {
+      font-weight: 400;
+      color: #dfe6e9;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skills button {
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 22px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(108, 92, 231, 0.4);
+    }
+
+    .skills button:hover {
+      background: linear-gradient(135deg, #a29bfe, #81ecec);
+      box-shadow: 0 6px 16px rgba(129, 236, 236, 0.6);
+      transform: scale(1.05);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-info a {
+      color: #00cec9;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .task-section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ffeaa7;
+    }
+
+    .task-section ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      list-style-type: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .task-section ul li {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 206, 201, 0.15);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .task-section ul li:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .task-section a {
+      color: #00cec9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .task-section a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .first {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .second h1 {
+        font-size: 30px;
+      }
+
+      .second h3 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="first">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="second">
+    <h1>Hi, I'm Vineela Srighakolapu</h1>
+    <h3>Full Stack Developer</h3>
+  </div>
+
+  <div class="third">
+    <a href="https://www.linkedin.com/in/srighakolapu-vineela-a6510a31a/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/vineela26-create" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    </a>
+    <a href="https://drive.google.com/file/d/1UD6LGwer1CAdhoD-jcMqoKuLf2v-8kdE/view" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Resume">
+    </a>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate developer who loves building web apps with modern tools and frameworks. I enjoy creating responsive, user-friendly interfaces and solving backend challenges.</p>
+  </div>
+
+  <div class="section" id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Information Technology</strong></p>
+    <p>Vishnu Educational Society, Bhimavaram</p>
+    <p>2023 – 2027 | CGPA: 9.4/10</p>
+  </div>
+
+  <div class="section" id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>AI/ML Intern</strong> at Brain Matrix</li>
+      <li>May 2025 – June 2025</li>
+      <li>Worked on credit card fraud detection using AI models.</li>
+      <br>
+      <li><strong>Freelancer – Personal Projects</strong></li>
+      <li>Built a weather bot, job portal, and Firebase-authenticated dashboards.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <button>React.js</button>
+      <button>Node.js</button>
+      <button>Python</button>
+      <button>Java</button>
+      <button>SQL</button>
+    </div>
+  </div>
+
+  <div class="section task-section">
+    <h3>Project Highlights</h3>
+    <ul>
+      <li><strong>Portfolio Website:</strong> You're viewing it right now!</li>
+      <li><strong>To-Do List App:</strong> <a href="todo.html" target="_blank">View To-Do List App</a> — A note-taking tool that saves tasks using localStorage.</li>
+      <li><strong>Product List:</strong> <a href="product.html" target="_blank">View Product List</a> — Online buying products portfolio.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>📧 Email: srighakolapuvineela@email.com</p>
+      <p>🌐 LinkedIn: 
+        <a href="https://www.linkedin.com/in/srighakolapu-vineela-a6510a31a/" target="_blank">View Profile</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

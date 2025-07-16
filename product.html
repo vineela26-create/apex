@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Listing</title>
+  <style>
+    .body {
+      background-size: cover;
+
+    }
+
+    .first {
+      background-color: blue;
+      color: white;
+      font-size: medium;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h3 {
+      text-align: center;
+      color: black;
+    }
+
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .controls select {
+      padding: 8px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    .overlayout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px;
+      justify-content: center;
+      color:azure;
+    }
+
+    .product {
+      background: rgb(241, 238, 238);
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .product img {
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      text-align: center;
+      color: #333;
+    }
+    .product p{
+      color: black;
+    }
+
+    .buy-button {
+       margin-top: 10px;
+      padding: 10px 12px;
+      width: 100%;
+      background-color: blue;
+      color: white;
+      
+      border-radius: 5px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="first">
+    <h1>🛍️ Product Listing</h1>
+  </div>
+
+  <h3>Select the products and Buy now</h3>
+
+  
+  <div class="controls">
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All Categories</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+    </select>
+
+  </div>
+
+  <div class="overlayout" id="productList">
+    <div class="product" data-category="electronics">
+      <img src="https://images.samsung.com/is/image/samsung/assets/in/smartphones/mobiles-by-price/Smartphones-under-40000-Mob.jpg?$720_N_JPG$" alt="Product">
+      <h3>Samsung Mobile</h3>
+      <p>Price: ₹40,000</p>
+      <p>Rating: 4.5⭐</p>
+      <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product" data-category="clothing">
+      <img src="https://image.hm.com/assets/hm/1c/7f/1c7f7f69bbb3bb17efa430f46f0cfc9895b9b286.jpg?imwidth=1260" alt="Product">
+      <h3>Regular Combo T-shirts</h3>
+      <p>Price: ₹2,000</p>
+      <p>Rating: 4.6⭐</p>
+      <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product" data-category="electronics">
+      <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510531ld.jpg" alt="Product">
+      <h3>Laptop</h3>
+      <p>Price: ₹60,000</p>
+      <p>Rating: 4.4⭐</p>
+      <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product" data-category="clothing">
+      <img src="https://i5.walmartimages.com/asr/b90dd90d-7a3a-4a1b-ae91-da877a2cade5.2ce323ad2cb27b607b1a28efca06610a.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Product">
+      <h3>Jacket</h3>
+      <p>Price: ₹900</p>
+      <p>Rating: 4.2⭐</p>
+      <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product" data-category="electronics">
+      <img src="https://m.media-amazon.com/images/I/811RreTN3rL.jpg" alt="Product">
+      <h3>Headphones</h3>
+      <p>Price: ₹5,000</p>
+      <p>Rating: 4.6⭐</p>
+      <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product" data-category="clothing">
+      <img src="https://image.hm.com/assets/hm/e3/a3/e3a37acfeaef55570045134ea57631828796ad00.jpg?imwidth=1260" alt="Product">
+      <h3>Motif-detail Twill Cap</h3>
+      <p>Price: ₹699</p>
+      <p>Rating: 4.3⭐</p>
+      <button class="buy-button">Buy Now</button>
+    </div>
+  </div>
+
+  
+  <script>
+    function filterProducts() {
+      const selectedCategory = document.getElementById("categoryFilter").value;
+      const products = document.querySelectorAll(".product");
+
+      products.forEach(product => {
+        const category = product.getAttribute("data-category");
+
+        if (selectedCategory === "all" || category === selectedCategory) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+    
+    
+
+  </script>
+</body>
+</html>
