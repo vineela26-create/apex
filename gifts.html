@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Giftify | Our Gifts</title>
+  <style>
+    body {
+      background-color: #FFF8F0; 
+    }
+
+    .first {
+      background-color: #FF6F91; 
+      color: #FFFFFF;
+      font-size: 24px;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      
+    }
+
+    h3 {
+      text-align: center;
+      color: #FF6F91; 
+      margin-top: 15px;
+    }
+
+    .overlayout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 30px;
+      justify-content: center;
+    }
+
+    .product {
+      background: #FFFFFF; 
+      padding: 15px;
+      border-radius: 15px;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      text-align: center;
+      color: #3C3C3C;
+      margin: 5px 0;
+    }
+
+    .product p {
+      color: #6B4226; 
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .product button {
+      margin-top: 8px;
+      padding: 8px 12px;
+      width: 100%;
+      border-radius: 25px;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .product button:first-of-type {
+      background-color: #FADADD; 
+      color: #3C3C3C;
+    }
+
+    .product button:first-of-type:hover {
+      background-color: #FF6F91;
+      color: #FFFFFF;
+    }
+
+    .buy-button {
+      background-color: #FF6F91; 
+      color: #FFFFFF;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .buy-button:hover {
+      background-color: #FF4C68; 
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="first">
+    🎁 Our Gifts Collection
+  </div>
+
+  <div class="overlayout" id="productList">
+   
+    <div class="product">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.-Fzqua3Be20rrcrrNnZQ4QHaH4?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Teddy Bear</h3>
+      <p>Price: ₹40,000</p>
+      <button class="buy-button" onclick="buyNow('Teddy Bear', '₹40,000')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.F4Xuu_p1-2GReTGXCjVFLwHaHa?w=875&h=875&rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Chocolate Hamper</h3>
+      <p>Price: ₹10,000</p>
+      <button class="buy-button" onclick="buyNow('Chocolate Hamper', '₹10,000')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/patrioticalternative/pages/1124/attachments/original/1633265361/SW_05.jpg?1633265361">
+      <h3>Festival Hampers</h3>
+      <p>Price: ₹1,000</p>
+      <button class="buy-button" onclick="buyNow('Festival Hampers', '₹1,000')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.rj-ve1Jg_hoZy0jl_FDFhAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Perfume Set</h3>
+      <p>Price: ₹1,299</p>
+      <button class="buy-button" onclick="buyNow('Perfume Set', '₹1,299')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.ShznXr5BCc9Sa0uMzJ6-MAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Candle Set</h3>
+      <p>Price: ₹500</p>
+      <button class="buy-button" onclick="buyNow('Candle Set', '₹500')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.BNfLZyLo4XRQ-VHrvcjv1gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Watch</h3>
+      <p>Price: ₹5,000</p>
+      <button class="buy-button" onclick="buyNow('Watch', '₹5,000')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81p3VdnBbjL._SL1500_.jpg">
+      <h3>RadhaKrishna Idol</h3>
+      <p>Price: ₹700</p>
+      <button class="buy-button" onclick="buyNow('RadhaKrishna Idol', '₹700')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/324975002/YM/YN/QP/6276105/ceramic-cup-bowl-gift-set-500x500.jpeg">
+      <h3>Cup Set</h3>
+      <p>Price: ₹900</p>
+      <button class="buy-button" onclick="buyNow('Cup Set', '₹900')">Buy Now</button>
+    </div>
+  </div>
+
+  <script>
+    function buyNow(productName, price) {
+      alert(`✅ Thank you! You purchase`);
+    }
+  </script>
+</body>
+</html>

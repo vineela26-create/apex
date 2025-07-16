@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giftify | Customization Form</title>
+    <style>
+      body {
+        background: #FFF8F0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        text-align: center;
+        background-color: #FF6F91;
+        color: #fff;
+        padding: 15px;
+        font-size: 24px;
+      }
+      .container {
+        max-width: 450px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+      .container h2 {
+        text-align: center;
+        color: #FF6F91;
+        margin-bottom: 15px;
+      }
+      input, select, textarea, button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #FF6F91;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 25px;
+      }
+      button:hover {
+        background-color: #FF4C68;
+      }
+      .social-buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .social-buttons a {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .whatsapp {
+        background-color: #25D366; 
+      }
+      .facebook {
+        background-color: #4267B2; 
+      }
+      .whatsapp:hover {
+        background-color: #1ebe5d;
+      }
+      .facebook:hover {
+        background-color: #375898;
+      }
+    </style>
+</head>
+<body>
+    <div class="header">🎁 Giftify Customization Request</div>
+
+    <div class="container">
+      <h2>Customize Your Gift</h2>
+      <form id="customForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        
+        <textarea name="customMessage" placeholder="Write your customization details here..." required></textarea>
+        <button type="submit" onclick="buynow()">📤 Send Customization Request</button>
+      </form>
+
+      <div class="social-buttons">
+        <h3>Or Contact Us Directly:</h3>
+        <a class="whatsapp" href="https://wa.me/919876543210" target="_blank">💬 WhatsApp Chat</a>
+        <a class="facebook" href="https://m.me/yourfacebookpagename" target="_blank">📘 Facebook Messenger</a>
+      </div>
+    </div>
+
+    <script>
+        function buynow(e) {
+        alert(`✅ Thank you! Your customization request has been sent`);
+        e.preventDefault();
+    }
+    </script>
+</body>
+</html>
