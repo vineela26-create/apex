@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QUIZ QUESTIONS WEBSITE</title>
+  <style>
+    body {
+      background-color: purple;
+      text-align: center;
+      font-size: 24px;
+      padding: 20px;
+      color: white;
+    }
+
+    h3 {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .question-block {
+      margin: 40px 0;
+      text-align: left;
+    }
+
+    .question-block h2 {
+      color: pink;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      margin: 10px;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .button-row button {
+      flex: 1;
+      min-width: 200px;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #00b894;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .correct {
+      background-color: green !important;
+    }
+
+    .wrong {
+      background-color: red !important;
+    }
+
+    .disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="first">
+    <h3>Social Quiz Questions</h3>
+  </div>
+
+  <div class="question-block">
+    <h2>1) What is the capital of France?</h2>
+    <div class="options" data-correct="Paris">
+      <div class="button-row">
+        <button>Paris</button>
+        <button>London</button>
+      </div>
+      <div class="button-row">
+        <button>Berlin</button>
+        <button>Tokyo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <h2>2) Which city in India is known as the "City of Joy"?</h2>
+    <div class="options" data-correct="Kolkata">
+      <div class="button-row">
+        <button>Bangalore</button>
+        <button>Mumbai</button>
+      </div>
+      <div class="button-row">
+        <button>Chennai</button>
+        <button>Kolkata</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <h2>3) Which is the largest continent by area?</h2>
+    <div class="options" data-correct="Asia">
+      <div class="button-row">
+        <button>Africa</button>
+        <button>Asia</button>
+      </div>
+      <div class="button-row">
+        <button>Europe</button>
+        <button>Antarctica</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <h2>4) Who wrote the national song of India?</h2>
+    <div class="options" data-correct="Bankim Chandra Chatterjee">
+      <div class="button-row">
+        <button>Rabindranath Tagore</button>
+        <button>Bankim Chandra Chatterjee</button>
+      </div>
+      <div class="button-row">
+        <button>William Shakespeare</button>
+        <button>None</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <h2>5) Which planet is known as the "Red Planet"?</h2>
+    <div class="options" data-correct="Mars">
+      <div class="button-row">
+        <button>Jupiter</button>
+        <button>Mercury</button>
+      </div>
+      <div class="button-row">
+        <button>Mars</button>
+        <button>Earth</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".options").forEach(optionGroup => {
+      const correctAnswer = optionGroup.getAttribute("data-correct");
+      const buttons = optionGroup.querySelectorAll("button");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          buttons.forEach(btn => {
+            btn.classList.add("disabled");
+            if (btn.textContent === correctAnswer) {
+              btn.classList.add("correct");
+            }
+          });
+
+          if (button.textContent !== correctAnswer) {
+            button.classList.add("wrong");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
